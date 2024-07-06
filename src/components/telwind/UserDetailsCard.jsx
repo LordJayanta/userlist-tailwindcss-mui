@@ -1,4 +1,6 @@
 import React from 'react'
+import AvatarImage from '../AvatarImage'
+import { width } from '@mui/system';
 
 const UserDetailsCard = ({ user={} , onClose}) => {
     // console.log(user);
@@ -12,7 +14,8 @@ const UserDetailsCard = ({ user={} , onClose}) => {
             </figure>
             <div className='flex flex-col gap-10 items-center'>
                 <figure className='w-[165px] h-[165px] rounded-[50px] border-[4px] border-[#0D87DF] overflow-hidden'>
-                    <img className='w-full h-full' src={avatar} alt="" />
+                    {/* <img className='w-full h-full' src={avatar} alt="" /> */}
+                    <AvatarImage sx={{height: '100%', width: '100%', padding: 0}} src={avatar}/>
                 </figure>
                 <div className="user-details flex flex-col items-center justify-center">
                     <div className='flex flex-col items-center justify-start'>
