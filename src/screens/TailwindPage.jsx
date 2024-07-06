@@ -50,7 +50,7 @@ const TailwindPage = () => {
             }
 
             {activeUser.status &&
-                <div className='w-full md:w-[450px] md:h-[80vh] md:m-0 m-4 overflow-auto md:static absolute'>
+                <div className='w-full md:w-[450px] md:h-[80vh] h-screen py-32 px-4 md:p-0 md:m-0 m-4 overflow-auto md:static absolute md:bg-transparent bg-[rgba(0,0,0,0.7)]'>
                     <UserDetailsCard user={activeUser.user} onClose={() => setActiveUser({ status: false, user: [] })} />
                 </div>
             }

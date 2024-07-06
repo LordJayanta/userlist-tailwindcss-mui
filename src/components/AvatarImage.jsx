@@ -4,6 +4,7 @@ const AvatarImage = ({ src, alt='avtar', fallbackSrc='./svg/user-sharing-stroke-
     const handleError = (e) => {
         e.target.src = fallbackSrc;
         e.target.style.padding = '5px';
+        e.target.style.background = '#1E1E1E';
       };
     
       return (
