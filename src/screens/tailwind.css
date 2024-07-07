@@ -1,7 +1,7 @@
 
 /* User card components */
 .userCard{
-    @apply w-full md:h-[150px] h-[300px] text-white flex gap-10 items-center md:flex-row flex-col px-10 border hover:border-[#0D87DF] rounded-[30px] my-4;
+    @apply w-full md:h-[150px] min-h-[120px] overflow-hidden text-white flex md:gap-10 gap-3 items-center md:px-10 px-3 border hover:border-[#0D87DF] md:rounded-[30px] rounded-lg my-4 ;
 }
 
 .deactiveUserCard {
@@ -21,7 +21,7 @@
 }
 
 .userCard-info{
-    @apply font-normal text-[16px] mb-2 flex gap-3;
+    @apply font-normal md:text-[16px] text-xs mb-2 flex md:gap-3 flex-wrap;
 }
 .activeUserCard .userCard-info{
     @apply text-white;

@@ -27,13 +27,14 @@ const TailwindPage = () => {
                 <Navbar />
             </div>
             {usersData.status == 200
-                ? <div className='w-full md:w-[680px] md:h-[80vh] md:m-0 m-4 overflow-auto'>
+                ? <div className='w-[full] md:w-[680px] md:h-[80vh] flex flex-col items-center overflow-auto md:mt-0 mt-[5em]'>
                     {usersData.data.map((user, index) => {
                         let active = {
                             status: true
                         }
                         return (
-                            <div key={index} onClick={() => setActiveUser({ status: true, user: user })}>
+                            <div key={index} onClick={() => setActiveUser({ status: true, user: user })}
+                            className='w-[100%] pl-4 pr-2 md:px-0'>
                                 <UserCard
                                     // active={activeUser.status} 
                                     avatar={user.avatar}
