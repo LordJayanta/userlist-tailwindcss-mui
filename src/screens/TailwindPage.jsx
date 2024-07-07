@@ -1,7 +1,8 @@
 import React from 'react'
+import'./tailwind.css';
 import { useEffect, useState } from 'react'
-import UserCard from '../components/telwind/UserCard'
-import UserDetailsCard from '../components/telwind/UserDetailsCard'
+import UserCard from '../components/talwind/UserCard'
+import UserDetailsCard from '../components/talwind/UserDetailsCard'
 import axios from 'axios'
 import Loader from '../components/Loader'
 import Navbar from '../components/Navbar'
@@ -50,7 +51,7 @@ const TailwindPage = () => {
             }
 
             {activeUser.status &&
-                <div className='w-full md:w-[450px] md:h-[80vh] h-screen py-32 px-4 md:p-0 md:m-0 m-4 overflow-auto md:static absolute md:bg-transparent bg-[rgba(0,0,0,0.7)]'>
+                <div className='w-full md:w-[450px] md:h-[80vh] h-screen md:m-0 m-4 overflow-auto md:static absolute md:bg-transparent bg-[rgba(0,0,0,0.7)] flex items-center justify-center'>
                     <UserDetailsCard user={activeUser.user} onClose={() => setActiveUser({ status: false, user: [] })} />
                 </div>
             }

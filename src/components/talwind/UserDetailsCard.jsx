@@ -1,12 +1,14 @@
 import React from 'react'
 import AvatarImage from '../AvatarImage'
 import { width } from '@mui/system';
+import { data } from 'autoprefixer';
 
-const UserDetailsCard = ({ user={} , onClose}) => {
+const UserDetailsCard = ({ user = {}, onClose }) => {
     // console.log(user);
     const { createdAt, avatar, jobTitle, Bio, profile = { username: '', firstName: '', lastName: '', email: '' } } = user;
+
     return (
-        <div className='relative bg-[#262626] w-full h-full text-white justify-center border-[3px] border-[#0D87DF] rounded-[30px] py-[80px]'>
+        <div className='relative bg-[#262626] md:w-full w-[90%] md:h-full text-white justify-center border-[3px] border-[#0D87DF] rounded-[30px] md:py-[80px] py-[40px] px-2'>
             <figure className='absolute right-5 top-5' onClick={onClose}>
                 <svg className='hover:text-[#0D87DF]' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={24} height={24} color={"#fff"} fill={"none"}>
                     <path d="M19.0005 4.99988L5.00045 18.9999M5.00045 4.99988L19.0005 18.9999" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -15,7 +17,7 @@ const UserDetailsCard = ({ user={} , onClose}) => {
             <div className='flex flex-col gap-10 items-center'>
                 <figure className='w-[165px] h-[165px] rounded-[50px] border-[4px] border-[#0D87DF] overflow-hidden'>
                     {/* <img className='w-full h-full' src={avatar} alt="" /> */}
-                    <AvatarImage sx={{height: '100%', width: '100%', padding: 0}} src={avatar}/>
+                    <AvatarImage sx={{ height: '100%', width: '100%', padding: 0 }} src={avatar} />
                 </figure>
                 <div className="user-details flex flex-col items-center justify-center">
                     <div className='flex flex-col items-center justify-start'>
@@ -30,7 +32,7 @@ const UserDetailsCard = ({ user={} , onClose}) => {
                         <p className='font-light text-sm leading-4 text-wrap text-center max-w-[340px]'>{Bio}</p>
                     </div>
 
-                    
+
                     <div className='mt-5'>
                         <div className='user-extra-info'>
                             <figure>
@@ -60,7 +62,10 @@ const UserDetailsCard = ({ user={} , onClose}) => {
                                     <path d="M2.854 16C2.30501 14.7664 2 13.401 2 11.9646C2 6.46129 6.47715 2 12 2C17.5228 2 22 6.46129 22 11.9646C22 13.401 21.695 14.7664 21.146 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                                 </svg>
                             </figure>
-                            <span>User seens {createdAt}</span>
+                            <span>
+                                <span>User seens from  </span>
+                                <strong>{createdAt && new Date(createdAt).toDateString()}</strong>
+                            </span>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,78 @@
+
+/* User card components */
+.userCard {
+    /* width: 100%; */
+    height: 300px;
+    color: white;
+    display: flex;
+    gap: 2.5rem; /* Tailwind's `gap-10` translates to 2.5rem or 40px */
+    align-items: center;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem; /* Tailwind's `px-10` translates to 2.5rem or 40px */
+    border: 1px solid; /* Assuming a default border style */
+    border-radius: 30px;
+    margin-top: 1rem; /* Tailwind's `my-4` translates to 1rem or 16px on the top and bottom */
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .userCard {
+        height: 150px;
+        flex-direction: row;
+    }
+}
+
+.userCard:hover {
+    border-color: #0D87DF;
+}
+
+.deactiveUserCard {
+    background-color: #262626;
+    border-color: #1E1E1E;
+}
+
+.deactiveUserCard figure {
+    border-color: #0D87DF;
+}
+
+.activeUserCard {
+    background-color: #0D87DF;
+    border-color: #0D87DF;
+}
+
+.activeUserCard figure {
+    border-color: white;
+}
+
+.userCard-info {
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 0.5rem; /* Tailwind's `mb-2` translates to 0.5rem or 8px */
+    display: flex;
+    gap: 0.75rem; /* Tailwind's `gap-3` translates to 0.75rem or 12px */
+}
+
+.activeUserCard .userCard-info {
+    color: white;
+}
+
+.deactiveUserCard .userCard-info {
+    color: #777777;
+}
+
+
+
+/* User details card components */
+.user-extra-info {
+    display: flex;
+    gap: 0.75rem; /* Tailwind's `gap-3` translates to 0.75rem or 12px */
+    font-size: 16px;
+    font-weight: 300; /* Tailwind's `font-light` translates to 300 */
+}
+
+.user-extra-info svg {
+    color: #0D87DF; /* Tailwind's `text-[#0D87DF]` translates to this color */
+    width: 19px;
+    height: 19px;
+}

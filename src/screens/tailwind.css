@@ -1,0 +1,41 @@
+
+/* User card components */
+.userCard{
+    @apply w-full md:h-[150px] h-[300px] text-white flex gap-10 items-center md:flex-row flex-col px-10 border hover:border-[#0D87DF] rounded-[30px] my-4;
+}
+
+.deactiveUserCard {
+    @apply bg-[#262626] border-[#1E1E1E];
+}
+
+.deactiveUserCard figure{
+    @apply border-[#0D87DF];
+}
+
+.activeUserCard {
+    @apply bg-[#0D87DF] border-[#0D87DF];
+}
+
+.activeUserCard figure{
+    @apply border-white;
+}
+
+.userCard-info{
+    @apply font-normal text-[16px] mb-2 flex gap-3;
+}
+.activeUserCard .userCard-info{
+    @apply text-white;
+}
+
+.deactiveUserCard .userCard-info{
+    @apply text-[#777777];
+}
+
+
+/* User details card components */
+.user-extra-info{
+    @apply flex gap-3 text-[16px] font-light;
+}
+.user-extra-info svg{
+    @apply text-[#0D87DF] w-[19px] h-[19px];
+}
